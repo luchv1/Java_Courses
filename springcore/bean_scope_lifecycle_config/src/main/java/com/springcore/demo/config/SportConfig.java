@@ -8,7 +8,7 @@ import com.springcore.demo.common.SwimCoach;
 
 @Configuration
 public class SportConfig {
-    @Bean
+    @Bean("swim")
     public Coach swimCoach() {
         return new SwimCoach();
     }

@@ -6,6 +6,7 @@ import com.springcore.demo.common.Coach;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
@@ -14,7 +15,7 @@ public class DemoController {
     private Coach myCoach;
 
     @Autowired
-    public DemoController(@Qualifier("gymCoach") Coach theCoach) {
+    public DemoController(@Qualifier("swimCoach") Coach theCoach) {
         myCoach = theCoach;
     }
 
